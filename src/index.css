@@ -46,18 +46,18 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 280 100% 70%;
 
-    /* Cyber color definitions */
-    --cyber-purple: #6B46C1;
-    --cyber-purple-light: #8B5CF6;
-    --cyber-purple-dark: #553C9A;
-    --cyber-blue: #06B6D4;
-    --cyber-blue-electric: #00D9FF;
-    --cyber-blue-dark: #0891B2;
-    --cyber-pink: #EC4899;
-    --cyber-pink-neon: #F472B6;
-    --cyber-pink-hot: #BE185D;
-    --cyber-green: #10B981;
-    --cyber-green-matrix: #00FF41;
+    /* Cyber color definitions - darker, more readable versions */
+    --cyber-purple: #4C1D95;
+    --cyber-purple-light: #5B21B6;
+    --cyber-purple-dark: #3730A3;
+    --cyber-blue: #0369A1;
+    --cyber-blue-electric: #0284C7;
+    --cyber-blue-dark: #075985;
+    --cyber-pink: #BE185D;
+    --cyber-pink-neon: #C2185B;
+    --cyber-pink-hot: #9D174D;
+    --cyber-green: #047857;
+    --cyber-green-matrix: #059669;
     --cyber-dark: #0F0F23;
     --cyber-dark-light: #1A1A2E;
   }
@@ -84,24 +84,24 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #00D9FF;
+    background: #0284C7;
     border-radius: 4px;
-    box-shadow: 0 0 10px #00D9FF;
+    box-shadow: 0 0 10px #0284C7;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #06B6D4;
+    background: #0369A1;
   }
 }
 
 @layer components {
   .glitch-text {
     position: relative;
-    color: #00D9FF;
+    color: #0284C7;
     text-shadow: 
-      0 0 5px #00D9FF,
-      0 0 10px #00D9FF,
-      0 0 15px #00D9FF;
+      0 0 5px #0284C7,
+      0 0 10px #0284C7,
+      0 0 15px #0284C7;
   }
 
   .glitch-text::before,
@@ -116,13 +116,13 @@
 
   .glitch-text::before {
     animation: glitch 0.3s ease-in-out infinite alternate;
-    color: #EC4899;
+    color: #BE185D;
     z-index: -1;
   }
 
   .glitch-text::after {
     animation: glitch 0.3s ease-in-out infinite alternate-reverse;
-    color: #8B5CF6;
+    color: #5B21B6;
     z-index: -2;
   }
 
@@ -137,7 +137,7 @@
 
   .neon-border {
     border: 2px solid transparent;
-    background: linear-gradient(45deg, #EC4899, #06B6D4, #8B5CF6) border-box;
+    background: linear-gradient(45deg, #BE185D, #0369A1, #5B21B6) border-box;
     mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
   }
@@ -145,8 +145,8 @@
   .matrix-code {
     font-family: 'Courier New', monospace;
     font-size: 14px;
-    color: #00FF41;
-    text-shadow: 0 0 5px #00FF41;
+    color: #059669;
+    text-shadow: 0 0 5px #059669;
     opacity: 0.7;
     white-space: pre;
     line-height: 1.2;
@@ -155,9 +155,9 @@
   .holographic {
     background: linear-gradient(
       45deg,
-      rgba(236, 72, 153, 0.3),
-      rgba(6, 182, 212, 0.3),
-      rgba(139, 92, 246, 0.3)
+      rgba(190, 24, 93, 0.3),
+      rgba(3, 105, 161, 0.3),
+      rgba(91, 33, 182, 0.3)
     );
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -169,7 +169,7 @@
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(45deg, #EC4899, #06B6D4, #8B5CF6);
+    background: linear-gradient(45deg, #BE185D, #0369A1, #5B21B6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -190,25 +190,25 @@
       0 0 20px currentColor;
   }
 
-  /* Cyber color utilities */
-  .text-cyber-purple { color: #6B46C1; }
-  .text-cyber-blue { color: #06B6D4; }
-  .text-cyber-blue-electric { color: #00D9FF; }
-  .text-cyber-pink { color: #EC4899; }
-  .text-cyber-green { color: #10B981; }
-  .text-cyber-green-matrix { color: #00FF41; }
+  /* Cyber color utilities - updated with darker colors */
+  .text-cyber-purple { color: #4C1D95; }
+  .text-cyber-blue { color: #0369A1; }
+  .text-cyber-blue-electric { color: #0284C7; }
+  .text-cyber-pink { color: #BE185D; }
+  .text-cyber-green { color: #047857; }
+  .text-cyber-green-matrix { color: #059669; }
   
-  .bg-cyber-purple { background-color: #6B46C1; }
-  .bg-cyber-blue { background-color: #06B6D4; }
-  .bg-cyber-pink { background-color: #EC4899; }
-  .bg-cyber-green { background-color: #10B981; }
+  .bg-cyber-purple { background-color: #4C1D95; }
+  .bg-cyber-blue { background-color: #0369A1; }
+  .bg-cyber-pink { background-color: #BE185D; }
+  .bg-cyber-green { background-color: #047857; }
   .bg-cyber-dark { background-color: #0F0F23; }
   
-  .border-cyber-blue { border-color: #06B6D4; }
-  .border-cyber-blue-electric { border-color: #00D9FF; }
-  .border-cyber-pink { border-color: #EC4899; }
-  .border-cyber-purple { border-color: #6B46C1; }
-  .border-cyber-green { border-color: #10B981; }
+  .border-cyber-blue { border-color: #0369A1; }
+  .border-cyber-blue-electric { border-color: #0284C7; }
+  .border-cyber-pink { border-color: #BE185D; }
+  .border-cyber-purple { border-color: #4C1D95; }
+  .border-cyber-green { border-color: #047857; }
 
   .bg-gradient-cyber {
     background: linear-gradient(135deg, #0F0F23 0%, #1A1A2E 50%, #16213E 100%);
