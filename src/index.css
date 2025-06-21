@@ -45,6 +45,21 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 280 100% 70%;
+
+    /* Cyber color definitions */
+    --cyber-purple: #6B46C1;
+    --cyber-purple-light: #8B5CF6;
+    --cyber-purple-dark: #553C9A;
+    --cyber-blue: #06B6D4;
+    --cyber-blue-electric: #00D9FF;
+    --cyber-blue-dark: #0891B2;
+    --cyber-pink: #EC4899;
+    --cyber-pink-neon: #F472B6;
+    --cyber-pink-hot: #BE185D;
+    --cyber-green: #10B981;
+    --cyber-green-matrix: #00FF41;
+    --cyber-dark: #0F0F23;
+    --cyber-dark-light: #1A1A2E;
   }
 }
 
@@ -54,7 +69,8 @@
   }
 
   body {
-    @apply bg-cyber-dark text-foreground;
+    background: linear-gradient(135deg, #0F0F23 0%, #1A1A2E 50%, #16213E 100%);
+    color: #FFFFFF;
     font-family: 'Orbitron', monospace;
   }
 
@@ -64,16 +80,17 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-cyber-dark;
+    background: #0F0F23;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-cyber-blue rounded-full;
-    box-shadow: 0 0 10px theme('colors.cyber.blue-electric');
+    background: #00D9FF;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #00D9FF;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-cyber-blue-electric;
+    background: #06B6D4;
   }
 }
 
@@ -171,5 +188,29 @@
       0 0 10px currentColor,
       0 0 15px currentColor,
       0 0 20px currentColor;
+  }
+
+  /* Cyber color utilities */
+  .text-cyber-purple { color: #6B46C1; }
+  .text-cyber-blue { color: #06B6D4; }
+  .text-cyber-blue-electric { color: #00D9FF; }
+  .text-cyber-pink { color: #EC4899; }
+  .text-cyber-green { color: #10B981; }
+  .text-cyber-green-matrix { color: #00FF41; }
+  
+  .bg-cyber-purple { background-color: #6B46C1; }
+  .bg-cyber-blue { background-color: #06B6D4; }
+  .bg-cyber-pink { background-color: #EC4899; }
+  .bg-cyber-green { background-color: #10B981; }
+  .bg-cyber-dark { background-color: #0F0F23; }
+  
+  .border-cyber-blue { border-color: #06B6D4; }
+  .border-cyber-blue-electric { border-color: #00D9FF; }
+  .border-cyber-pink { border-color: #EC4899; }
+  .border-cyber-purple { border-color: #6B46C1; }
+  .border-cyber-green { border-color: #10B981; }
+
+  .bg-gradient-cyber {
+    background: linear-gradient(135deg, #0F0F23 0%, #1A1A2E 50%, #16213E 100%);
   }
 }
